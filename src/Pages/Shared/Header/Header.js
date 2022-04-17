@@ -13,14 +13,16 @@ const Header = () => {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand as={Link} to="/home">
+          <Navbar.Brand as={Link} to="/">
             Cholo Ghuri
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link as={Link} to="#features">Features</Nav.Link>
-              <Nav.Link as={Link} to="#pricing">Pricing</Nav.Link>
+              <Nav.Link as={Link} to="#services">Service</Nav.Link>
+              <Nav.Link as={Link} to="/about">About</Nav.Link>
+              <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link as={Link} to="#deets">More deets</Nav.Link>
