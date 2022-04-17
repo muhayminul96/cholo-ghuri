@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
-    return (
-        <div>
-            <h2>  &copy; Cholo Ghuri {new Date().getFullYear()} </h2>
-        </div>
-    );
+  return (
+    <div>
+      <p className="text-dark mt-5 ">
+        {" "}
+        &copy; Cholo Ghuri {new Date().getFullYear()}{" "}
+      </p>
+    </div>
+  );
 };
 
 export default Footer;
