@@ -9,10 +9,9 @@ const Service = ({ service }) => {
       <div className="service-details">
         <h2 className="fs-3 fw-bold">{name}</h2>
         <p className="fs-4">
-          {" "}
-          Price {price} BDT <small>per Day</small>
+          Only {price} BDT <small>per Day</small>
         </p>
-        <p>{about}</p>
+        <p title={about}>{about.length < 180 ? about : about.slice(0, 177) + " ..."} </p>
         <button className="btn  fw-bold btn-success px-4 fs-4">Book Me</button>
       </div>
     </div>
