@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "picture": "http://placehold.it/32x32",
+    "price": 5389,
+    "rating": 4,
+    "name": "Ratliff",
+    "about": "Minim voluptate ea reprehenderit velit culpa aliqua. Labore amet reprehenderit magna pariatur fugiat et ea in. Esse aliquip veniam fugiat ipsum incididunt do ea laboris occaecat. Laboris dolor culpa ad proident ea velit fugiat occaecat est consequat. Ad quis minim nisi aute dolore qui incididunt tempor. Eiusmod dolore irure sunt cillum quis amet deserunt cillum.\r\n"
+  },
+  {
+    "id": 1,
+    "picture": "http://placehold.it/32x32",
+    "price": 7191,
+    "rating": 2,
+    "name": "Rita",
+    "about": "Duis duis Lorem sit sunt. Exercitation quis officia amet laboris ea tempor tempor labore commodo nulla. Laborum eiusmod eiusmod anim mollit adipisicing. Esse sunt aliquip consectetur dolore velit duis magna. Do ea veniam aliqua culpa incididunt pariatur labore velit quis esse aliquip. Ea commodo exercitation commodo id.\r\n"
+  },
+  {
+    "id": 2,
+    "picture": "http://placehold.it/32x32",
+    "price": 6119,
+    "rating": 2,
+    "name": "Hazel",
+    "about": "Ex fugiat veniam cillum reprehenderit nulla commodo consequat ipsum. Nulla dolore culpa pariatur deserunt consequat et culpa eu aliquip elit ea. Pariatur sunt velit sunt excepteur. Nisi consectetur veniam aliquip enim elit. Aute quis laboris deserunt quis voluptate irure. Do quis ex duis mollit laborum tempor irure sit. Ut dolore duis commodo officia proident dolor.\r\n"
+  }
+]

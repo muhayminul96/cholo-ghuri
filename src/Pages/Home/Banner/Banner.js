@@ -8,7 +8,8 @@ const Banner = () => {
         <Carousel.Item interval={1000}>
           <img
             className="d-block w-100"
-            src="https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
+            src="https://i.ibb.co/9gmbXp7/banner1.jpg
+            "
             alt="First slide"
           />
           <Carousel.Caption>
@@ -19,7 +20,7 @@ const Banner = () => {
         <Carousel.Item interval={500}>
           <img
             className="d-block w-100"
-            src="https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
+            src="https://i.ibb.co/PQzPdCP/banner2.jpg"
             alt="Second slide"
           />
           <Carousel.Caption>
@@ -30,7 +31,8 @@ const Banner = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
+            src="https://i.ibb.co/hYrq9yC/banner3.jpg
+            "
             alt="Third slide"
           />
           <Carousel.Caption>
