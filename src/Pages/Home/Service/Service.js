@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Service.css";
 
 const Service = ({ service }) => {
+  const navigate = useNavigate()
   const { id, picture, price, rating, name, about } = service;
   return (
     <div className="service-container">
@@ -12,7 +14,7 @@ const Service = ({ service }) => {
           Only {price} BDT <small>per Day</small>
         </p>
         <p title={about}>{about.length < 180 ? about : about.slice(0, 177) + " ..."} </p>
-        <button className="btn  fw-bold btn-success px-4 fs-4">Book Me</button>
+        <button onClick={()=>navigate(`/booking/${id}`)} className="btn  fw-bold btn-success px-4 fs-4">Book Me</button>
       </div>
     </div>
   );
