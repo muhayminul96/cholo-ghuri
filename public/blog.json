@@ -1,0 +1,17 @@
+[
+  {
+    "id": "624c02cebec4f8c936df8a1e",
+    "title": "Difference between authorization and authentication",
+    "blogText": "Authentication is the act of confirming a person's identity, whereas authorisation is the process of confirming a user's access to certain apps, files, and data. Authentication and authorisation serve the same purpose in the digital age. Authentication is a technique for ensuring that people are who they say they are. After this has been verified, authorisation is used to provide the user authority to access various levels of information and execute certain duties, based on the rules defined for various sorts of users."
+  },
+  {
+    "id": "624c02ce0a76f6fc67382eb1",
+    "title": "Why are you using firebase? What other options do you have to implement authentication?",
+    "blogText": "Because Firebase is a Google product, it can provide sophisticated databases for online and mobile application development. After connecting NoSQL cloud-storage, Firebase Realtime database allows apps to access cross-platform data in realtime. Firebase is known for its safe and quick hosting services. All content categories, including web apps, dynamic and static material, are supported by Firebase hosting. Furthermore, whether you want to host Express.js microservices, HTML, CSS, or APIs, Firebase's hosting support is always available. Firebase lets programmers to create apps without spending any money. Beginners may easily understand how their app functions in a real-world setting thanks to Firebase's free services.You may use Parse, AWS Amplify, Couchbase, Kuzzle, and other alternatives to Firebase. "
+  },
+  {
+    "id": "624c02cea403162ac3f8edb7",
+    "title": "What other services does firebase provide other than authentication?",
+    "blogText": "Because Firebase Realtime Database was the first product under the Firebase banner, it is the most well-established and stable service on the platform. Cloud Firestore is another real-time NoSQL database hosted in the cloud. Cloud Firestore, unlike Firebase Realtime Database, is built for corporate use, with scalability, sophisticated data models, and extensive querying capabilities. Service of hosting. You'll need hosting whether you're building a web app, a progressive web app, or a mobile landing page. Firebase provides static web hosting for HTML, CSS, and JavaScript applications. When your app is online, you'll be able to oversee how users engage with it from a business standpoint. Test Lab is a service that allows you to test your app in a real-world setting using virtual and actual devices."
+  }
+]

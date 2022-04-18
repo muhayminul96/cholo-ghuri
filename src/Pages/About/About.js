@@ -8,8 +8,8 @@ const About = () => {
         <div className="about-details">
           <p>
             I am a Cse gradaute , And stuying Maaster in Cse in Khulna
-            University. In few MOnth I complete My Programing hero courese Then
-            I try to Join As Fontend Devoloper Then try to foucus Back end.
+            University. In few Month, I complete My Programing hero courese Then
+            I try to Join As Fontend Devoloper Then try to focus Backend.
             After 10 Year join as position Senior Software arcitect{" "}
           </p>
         </div>
