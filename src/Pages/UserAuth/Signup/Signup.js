@@ -49,6 +49,10 @@ const Signup = () => {
     navigate('/home')
   }
 
+  if(error || error1 ){
+    alert(error?.message?error?.message:error1?.message)
+  }
+
   return (
     <div>
       <Form className="w-50 mx-auto my-5" onSubmit={handleSignupSubmit}>
@@ -87,7 +91,7 @@ const Signup = () => {
       </Form>
       <Button
         onClick={() => signInWithGoogle()}
-        className="w-25 mx-auto"
+        className="w-25 mx-auto mb-3"
         variant="primary"
         type="submit"
       >

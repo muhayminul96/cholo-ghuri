@@ -8,7 +8,6 @@ import Loding from "../Loding";
 
 const Header = () => {
   const [user, loading, error] = useAuthState(auth);
-  
 
   return (
     <div>
@@ -26,6 +25,9 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
+              <Nav.Link as={Link} to="/home">
+                Home
+              </Nav.Link>
               <Nav.Link href="/home#faq">FAQ</Nav.Link>
               <Nav.Link href="/home#services">Service</Nav.Link>
               <Nav.Link as={Link} to="/about">
@@ -36,14 +38,30 @@ const Header = () => {
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link as={Link} to="#deets">
-                {user ? user?.email : ""}
-              </Nav.Link>
-              {user?
-              <button className="btn btn-link text-decoration-none" onClick={()=>signOut(auth)}>Log out</button>:
-              <Nav.Link eventKey={2} as={Link} to="/signup">
-                Signup
-              </Nav.Link>}
+
+            {
+            user?
+
+            <Nav.Link as={Link} to="/home">
+              {user?.email}
+            </Nav.Link>
+            :
+            ''
+            }
+              
+              
+              {user ? (
+                <button
+                  className="btn btn-link text-decoration-none"
+                  onClick={() => signOut(auth)}
+                >
+                  Log out
+                </button>
+              ) : (
+                <Nav.Link eventKey={2} as={Link} to="/signup">
+                  Signup
+                </Nav.Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -38,7 +38,6 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   };
   const resetPassword = async () => {
-    console.log("hello");
     if (email) {
       await sendPasswordResetEmail(email);
       toast("Sent email");
@@ -55,7 +54,6 @@ const Login = () => {
 
   return (
     <div>
-      <h1>login</h1>
       <Form className="w-50 mx-auto my-5" onSubmit={handleSignINSubmit}>
         <h1 className="fw-bold">Login Please</h1>
         <Form.Group className="my-3" controlId="formBasicEmail">
@@ -83,7 +81,7 @@ const Login = () => {
       </Form>
       <Button
         onClick={() => signInWithGoogle()}
-        className="w-25 mx-auto"
+        className="w-25 mx-auto mb-3"
         variant="primary"
         type="submit"
       >
@@ -99,7 +97,7 @@ const Login = () => {
       <p>
         forget password
         <button
-          className="btn btn-link text-decoration-none"
+          className="btn ms-2 btn-link text-decoration-none"
           onClick={resetPassword}
         >
           Reset password
