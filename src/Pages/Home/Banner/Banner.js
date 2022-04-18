@@ -34,7 +34,7 @@ const Banner = () => {
             alt="Third slide"
           />
           <Carousel.Caption>
-            <h3>Know </h3>
+            <h3>Know Everywhere</h3>
             <p>Know everywhere that you wants to see.</p>
           </Carousel.Caption>
         </Carousel.Item>
