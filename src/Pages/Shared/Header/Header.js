@@ -26,7 +26,7 @@ const Header = () => {
                 Service
               </Nav.Link>
               <Nav.Link as={Link} to="/about">
-                About
+                About Me
               </Nav.Link>
               <Nav.Link as={Link} to="/blog">
                 Blog
@@ -36,8 +36,8 @@ const Header = () => {
               <Nav.Link as={Link} to="#deets">
                 More deets
               </Nav.Link>
-              <Nav.Link eventKey={2} as={Link} to="#memes">
-                Dank memes
+              <Nav.Link eventKey={2} as={Link} to="/signup">
+                Signup
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
