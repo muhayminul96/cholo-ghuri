@@ -45,6 +45,10 @@ const Signup = () => {
     }
   };
 
+  if(user||user1){
+    navigate('/home')
+  }
+
   return (
     <div>
       <Form className="w-50 mx-auto my-5" onSubmit={handleSignupSubmit}>
