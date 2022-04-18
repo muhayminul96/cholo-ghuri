@@ -5,6 +5,7 @@ import Blogs from "./Pages/Blog/Blogs/Blogs";
 import Booking from "./Pages/Booking/Booking";
 import Home from "./Pages/Home/Home/Home";
 import NotFoundError from "./Pages/NotFoundError/NotFoundError";
+import RequireAuth from "./Pages/RequireAuth/RequireAuth";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import Login from "./Pages/UserAuth/Login/Login";
@@ -21,7 +22,11 @@ function App() {
         <Route path="/blog" element={<Blogs></Blogs>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/booking/:serviceId" element={<Booking></Booking>}></Route>
+        <Route path="/booking/:serviceId" element={
+        <RequireAuth>
+           <Booking></Booking>
+        </RequireAuth>
+       }></Route>
         <Route path="*" element={<NotFoundError></NotFoundError>}></Route>
       </Routes>
       <Footer></Footer>

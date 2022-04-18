@@ -1,8 +1,29 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import {
+    useAuthState,
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import auth from "../../../firbase.init";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
+
+    let navigate = useNavigate();
+    let location = useLocation();
+    const [user, loading, error] = useAuthState(auth);
+    let from = location.state?.from?.pathname || "/";
+
+  const [sendPasswordResetEmail, sending, error2] =
+    useSendPasswordResetEmail(auth);
+  const [signInWithEmailAndPassword, user3, loading3, error3] =
+    useSignInWithEmailAndPassword(auth);
+  const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,9 +35,21 @@ const Login = () => {
   };
   const handleSignINSubmit = (event) => {
     event.preventDefault();
-
-    console.log(email, password);
+    signInWithEmailAndPassword(email, password);
   };
+  const resetPassword = async () => {
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("Sent email");
+    } else {
+      alert("email problem");
+    }
+  };
+
+  
+
+  
+
   return (
     <div>
       <h1>login</h1>
@@ -45,6 +78,14 @@ const Login = () => {
           Login
         </Button>
       </Form>
+      <Button
+        onClick={() => signInWithGoogle()}
+        className="w-25 mx-auto"
+        variant="primary"
+        type="submit"
+      >
+        Google Sign in
+      </Button>
       <p>
         You have no account in Cholo Ghuri?, no tension{" "}
         <Link className="btn btn-link text-decoration-none" to="/signup">
@@ -52,6 +93,13 @@ const Login = () => {
           Signup
         </Link>{" "}
       </p>
+      <p>
+        forget password{" "}
+        <Button className="btn " onclick={resetPassword}>
+          Reset
+        </Button>{" "}
+      </p>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firbase.init";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import Loding from "../../Shared/Loding";
 
 const Signup = () => {
+    const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
-    if(user){
-        navigate('/home')
-    }
+  if (user) {
+    navigate("/home");
+  }
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -26,8 +30,8 @@ const Signup = () => {
   const handleConfirmPasswordChange = (event) => {
     setConfirmPassword(event.target.value);
   };
-  if(loading){
-      return <Loding></Loding>
+  if (loading) {
+    return <Loding></Loding>;
   }
   const handleSignupSubmit = (event) => {
     event.preventDefault();
@@ -74,6 +78,9 @@ const Signup = () => {
           Sign Up
         </Button>
       </Form>
+      <Button onClick={() => signInWithGoogle()} className="w-25 mx-auto" variant="primary" type="submit">
+        Google sign Up
+      </Button>
       <p>
         You have account in cholo Ghuri? you can{" "}
         <Link className="btn btn-link text-decoration-none" to="/login">
@@ -81,7 +88,7 @@ const Signup = () => {
           Login
         </Link>{" "}
       </p>
-      
+      <ToastContainer />
     </div>
   );
 };
