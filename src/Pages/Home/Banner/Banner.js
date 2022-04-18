@@ -25,7 +25,7 @@ const Banner = () => {
           />
           <Carousel.Caption>
             <h3>Best security</h3>
-            <p>I give best security that can help to improve your safety.</p>
+            <p>I give best security and safety.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -37,7 +37,7 @@ const Banner = () => {
           />
           <Carousel.Caption>
             <h3>Know Everywhere</h3>
-            <p>Know everywhere that you wants to see.</p>
+            <p>Know everywhere wants to see.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
