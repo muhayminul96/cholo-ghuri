@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import {
-    useAuthState,
+  useAuthState,
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
@@ -10,13 +10,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firbase.init";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loding from "../../Shared/Loding";
 
 const Login = () => {
-
-    let navigate = useNavigate();
-    let location = useLocation();
-    const [user, loading, error] = useAuthState(auth);
-    let from = location.state?.from?.pathname || "/";
+  let navigate = useNavigate();
+  let location = useLocation();
+  const [user, loading, error] = useAuthState(auth);
+  let from = location.state?.from?.pathname || "/";
 
   const [sendPasswordResetEmail, sending, error2] =
     useSendPasswordResetEmail(auth);
@@ -45,10 +45,12 @@ const Login = () => {
       alert("email problem");
     }
   };
-
-  
-
-  
+  if (loading) {
+    return <Loding></Loding>;
+  }
+  if (user) {
+    navigate(from, { replace: true });
+  }
 
   return (
     <div>
