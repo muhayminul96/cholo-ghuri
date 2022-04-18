@@ -7,6 +7,7 @@ import Home from "./Pages/Home/Home/Home";
 import NotFoundError from "./Pages/NotFoundError/NotFoundError";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
+import Login from "./Pages/UserAuth/Login/Login";
 import Signup from "./Pages/UserAuth/Signup/Signup";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/blog" element={<Blogs></Blogs>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
-        <Route path="/login" element={<Blogs></Blogs>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/booking/:serviceId" element={<Booking></Booking>}></Route>
         <Route path="*" element={<NotFoundError></NotFoundError>}></Route>
       </Routes>

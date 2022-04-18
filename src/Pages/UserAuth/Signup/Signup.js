@@ -1,10 +1,21 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../../firbase.init";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import Loding from "../../Shared/Loding";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate()
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+
+    if(user){
+        navigate('/home')
+    }
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -15,11 +26,16 @@ const Signup = () => {
   const handleConfirmPasswordChange = (event) => {
     setConfirmPassword(event.target.value);
   };
-
+  if(loading){
+      return <Loding></Loding>
+  }
   const handleSignupSubmit = (event) => {
     event.preventDefault();
-
-    console.log(email, password, confirmPassword);
+    if (password !== confirmPassword) {
+      alert("password not match");
+    } else {
+      createUserWithEmailAndPassword(email, password);
+    }
   };
 
   return (
@@ -58,6 +74,14 @@ const Signup = () => {
           Sign Up
         </Button>
       </Form>
+      <p>
+        You have account in cholo Ghuri? you can{" "}
+        <Link className="btn btn-link text-decoration-none" to="/login">
+          {" "}
+          Login
+        </Link>{" "}
+      </p>
+      
     </div>
   );
 };
