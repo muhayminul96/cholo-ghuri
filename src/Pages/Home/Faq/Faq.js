@@ -8,7 +8,7 @@ const Faq = () => {
         <div className="col-lg-5 col-12">
           <img
             className="img-fluid"
-            src="https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg"
+            src="https://image.shutterstock.com/image-photo/beautiful-autumn-scene-hintersee-lake-260nw-747646759.jpg"
             alt=""
           ></img>
         </div>
