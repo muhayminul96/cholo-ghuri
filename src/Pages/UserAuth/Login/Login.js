@@ -78,7 +78,7 @@ const Login = () => {
         <Button className="w-100" variant="primary" type="submit">
           Login
         </Button>
-        <p> {error3? error3.massage: '' } </p>
+        <p> {error3? error3.message: '' } </p>
       </Form>
       <Button
         onClick={() => signInWithGoogle()}
